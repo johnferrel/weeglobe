@@ -1,0 +1,36 @@
+{
+    "indent_size": 4,
+    "indent_char": " ",
+    "end_with_newline": true,
+    "indent_empty_lines": false,
+    "preserve_newlines": true,
+    "max_preserve_newlines": 2,
+    "html": {
+        "indent_inner_html": true,
+        "wrap-attributes": "preserve",
+        "inline": [ "span", "a", "p", "strong", "i", "em" ],
+        "extra_liners": [ "head", "body", "/html" ],
+        "preserve_newlines": false,
+        "js": {
+            "max_preserve_newlines": 1,
+            "preserve_newlines": true,
+            "brace_style": "collapse",
+            "comma_first": false,
+            "space_after_anon_function": true,
+            "space_after_named_function": true,
+            "end_with_newline": false,
+            "space_in_paren": false
+        }
+    },
+    "css": {
+        "selector_separator_newline": false,
+        "newline_between_rules": true
+    },
+    "js": {
+        "brace_style": "collapse",
+        "comma_first": false,
+        "space_after_anon_function": true,
+        "space_after_named_function": true,
+        "space_in_paren": false
+    }
+}

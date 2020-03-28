@@ -1,0 +1,49 @@
+# Logs
+logs/
+npm-debug.log*
+
+# Bower dependency directory (https://bower.io/)
+bower_components/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+.npmrc
+
+# Optional eslint cache
+.eslintcache
+
+# SASS cache
+.sass-cache
+
+# dotenv environment variables file
+.env
+
+# web build directories
+_site/
+_gitlab/
+
+# Auto-generated files
+dist/
+data/
+!/data/icons.json
+tokens/
+!tokens/*.template
+
+# Ignore root .njk files in /components
+components/*.njk
+# keep files in subdirectories in /components
+!components/*/
+
+# OS folder attributes
+*.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.idea
+.vscode/
+*.code-workspace
