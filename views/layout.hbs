@@ -24,7 +24,19 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    {{{body}}}
+      <div class="page-wrapper">
+          {{!-- header partial --}}
+          {{> header }}
+
+          {{!-- page content --}}
+          {{{body}}}
+
+          {{!-- footer partial --}}
+          {{> footer }}
+
+        {{!-- search popup --}}
+        {{!-- {{> searchPopup }} --}}
+      </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
