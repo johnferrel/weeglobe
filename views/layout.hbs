@@ -25,8 +25,13 @@
   </head>
   <body>
       <div class="page-wrapper">
+          {{!-- preloader --}}
+          <div class="preloader"></div>
           {{!-- header partial --}}
           {{> header }}
+
+          {{!-- circle nav --}}
+          {{> navMain }}
 
           {{!-- page content --}}
           {{{body}}}
