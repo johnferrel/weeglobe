@@ -1,0 +1,36 @@
+.cirlebar {
+    position: fixed;
+    top: 25%;
+    right: 3%;
+    z-index: 99999;  
+
+    .cirlebar_icon {
+        position: relative;
+        display: block;
+        font-size: 38px;
+        line-height: 1.2em;
+        color: #ffffff;
+        font-weight: 400;
+    } 
+}
+    
+.cirlebar .nav-link {
+    background-color: #f2c9b5;
+    margin: 0px 8px 20px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Fredoka One", sans-serif;
+}
+
+.cirlebar .nav-link.active, 
+.cirlebar .show>.nav-link {
+    color: #fff;
+    background-color: #d1cefd;
+}
