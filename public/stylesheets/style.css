@@ -29,3 +29,6 @@
 .cirlebar .show > .nav-link {
   color: #fff;
   background-color: #d1cefd; }
+
+.news-block-two .text {
+  min-height: 215px; }

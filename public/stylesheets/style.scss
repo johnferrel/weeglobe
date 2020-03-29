@@ -2,7 +2,7 @@
     position: fixed;
     top: 25%;
     right: 3%;
-    z-index: 99999;  
+    z-index: 99999;
 
     .cirlebar_icon {
         position: relative;
@@ -11,9 +11,9 @@
         line-height: 1.2em;
         color: #ffffff;
         font-weight: 400;
-    } 
+    }
 }
-    
+
 .cirlebar .nav-link {
     background-color: #f2c9b5;
     margin: 0px 8px 20px;
@@ -29,8 +29,15 @@
     font-family: "Fredoka One", sans-serif;
 }
 
-.cirlebar .nav-link.active, 
+.cirlebar .nav-link.active,
 .cirlebar .show>.nav-link {
     color: #fff;
     background-color: #d1cefd;
+}
+
+// news/update block
+.news-block-two {
+    .text {
+        min-height: 215px;
+    }
 }
