@@ -34,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/classroom', indexRouter);
 app.use('/reading', indexRouter);
+app.use('/read', indexRouter);
 app.use('/activities', indexRouter);
 app.use('/games', indexRouter);
 app.use('/users', usersRouter);

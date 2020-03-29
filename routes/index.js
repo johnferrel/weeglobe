@@ -42,6 +42,10 @@ router.get('/reading', function(req, res, next) {
   res.render('reading', { title: 'Let\'s get to readin\'' })
 });
 
+router.get('/stories', function(req, res, next) {
+    res.render('read/stories', { title: 'Let\'s get to readin\'' })
+  });
+
 router.get('/activities', function(req, res, next) {
   res.render('activities', { title: 'Activities' })
 });
