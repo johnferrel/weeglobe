@@ -19,8 +19,50 @@
     -webkit-animation: 2s rainbow infinite alternate;
     animation: 2s rainbow infinite alternate; }
 
+.content-block {
+  padding-bottom: 0; }
+  .content-block .scroll-to-top {
+    position: relative; }
+  .content-block--blue {
+    background-color: #5798fe; }
+    .content-block--blue .sec-title .title,
+    .content-block--blue .content-column .text {
+      color: #ffffff; }
+    .content-block--blue .scroll-to-top {
+      background-image: url(../images/icons/curve-flipped.png);
+      top: 2px; }
+      .content-block--blue .scroll-to-top .icon-arrow-up {
+        margin-top: 10px; }
+  .content-block--blue:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/icons/pattern.png);
+    background-repeat: repeat;
+    background-position: center;
+    content: ""; }
+
 .news-block-two h3 {
   min-height: 100px; }
 
 .news-block-two .text {
   min-height: 215px; }
+
+.btn-style-three {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 25px 70px;
+  font-weight: 400;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: #ff4880; }
+
+.btn-style-three:hover {
+  color: #ffffff;
+  -webkit-animation: 2s rainbow infinite alternate;
+  animation: 2s rainbow infinite alternate; }
