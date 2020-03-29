@@ -51,14 +51,14 @@ router.get('/', function (req, res, next) {
 // });
 
 /* GET stories. */
-router.get('reading', function (req, res, next) {
+router.get('/reading', function (req, res, next) {
 	res.render('reading', {
     	title: 'Stories',
-    	pageTitles: [
+    	stories: [
         	{
 				genre: 'Science',
-				storyUrl: '',
-				storyTitle: '',
+				storyUrl: '/boy-apple-tree',
+				storyTitle: 'The boy and the apple tree',
 				readingTime: '',
 				storyAuthor: '',
 			}
@@ -66,16 +66,12 @@ router.get('reading', function (req, res, next) {
   	});
 });
 
+router.get('/boy-apple-tree', function(req, res, next) {
+	res.render('reading/boy-apple-tree', { title: 'The boy and the apple tree' })
+  });
+
 router.get('/classroom', function(req, res, next) {
     res.render('classroom', { title: 'Classsroom' })
-});
-
-router.get('/reading', function(req, res, next) {
-  res.render('reading', { title: 'Reading' })
-});
-
-router.get('/stories', function(req, res, next) {
-  res.render('reading/stories', { title: 'Stories' })
 });
 
 router.get('/activities', function(req, res, next) {
