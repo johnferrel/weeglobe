@@ -39,12 +39,12 @@ router.get('/classroom', function(req, res, next) {
 });
 
 router.get('/reading', function(req, res, next) {
-  res.render('reading', { title: 'Let\'s get to readin\'' })
+  res.render('reading', { title: 'Reading' })
 });
 
 router.get('/stories', function(req, res, next) {
-    res.render('read/stories', { title: 'Let\'s get to readin\'' })
-  });
+  res.render('reading/stories', { title: 'Stories' })
+});
 
 router.get('/activities', function(req, res, next) {
   res.render('activities', { title: 'Activities' })
