@@ -49,20 +49,20 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET page titles. */
-// router.get('/boy-apple-tree', function (req, res, next) {
-// 	res.render('reading/boy-apple-tree', {
-//     	pageTitles: [
-//         	{
-// 				bgimage: 'background-image:url(images/background/1.jpg);',
-// 				link1: '/',
-// 				link1Title: 'Home',
-// 				link2: '/reading',
-// 				link2Title: 'All Genres',
-// 				genre: 'Funny Stories'
-// 			}
-//       	]
-//   	});
-// });
+router.get('/boy-apple-tree', function (req, res, next) {
+	res.render('reading/boy-apple-tree', {
+    	pageTitles: [
+        	{
+				bgimage: 'background-image:url(images/background/1.jpg);',
+				link1: '/',
+				link1Title: 'Home',
+				link2: '/reading',
+				link2Title: 'All Genres',
+				genre: 'Funny Stories'
+			}
+      	]
+  	});
+});
 
 /* GET stories. */
 router.get('/reading', function (req, res, next) {
@@ -82,7 +82,7 @@ router.get('/reading', function (req, res, next) {
 
 router.get('/boy-apple-tree', function(req, res, next) {
 	res.render('reading/boy-apple-tree', { title: 'The boy and the apple tree' })
-  });
+});
 
 router.get('/classroom', function(req, res, next) {
     res.render('classroom', { title: 'Classsroom' })
