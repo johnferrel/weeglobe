@@ -7,7 +7,7 @@
     .cirlebar_icon {
         font-size: 38px;
         color: #ffffff;
-    } 
+    }
 }
 
 .cirlebar .nav-link {
@@ -27,6 +27,10 @@
 
 // news/update block
 .news-block-two {
+    h3 {
+        min-height: 100px;
+    }
+
     .text {
         min-height: 215px;
     }

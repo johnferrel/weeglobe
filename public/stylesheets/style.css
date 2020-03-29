@@ -19,5 +19,8 @@
     -webkit-animation: 2s rainbow infinite alternate;
     animation: 2s rainbow infinite alternate; }
 
+.news-block-two h3 {
+  min-height: 100px; }
+
 .news-block-two .text {
   min-height: 215px; }
