@@ -34,6 +34,23 @@ router.get('/', function (req, res, next) {
     });
 });
 
+/* GET page titles. */
+router.get('/stories', function (req, res, next) {
+	res.render('reading/stories', {
+    	title: 'Stories',
+    	pageTitles: [
+        	{
+				bgimage: 'background-image:url(images/background/1.jpg);',
+				link1: '/',
+				link1Title: 'Home',
+				link2: '/reading',
+				link2Title: 'All Genres',
+				genre: 'Funny Stories'
+			}
+      	]
+  	});
+});
+
 router.get('/classroom', function(req, res, next) {
     res.render('classroom', { title: 'Classsroom' })
 });

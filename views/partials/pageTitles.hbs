@@ -1,0 +1,14 @@
+{{#each pageTitles as |item|}}
+    <section class="page-title" style="{{ item.bgimage }}">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="{{ item.link1 }}">{{ item.link1Title }}</a></li>
+                    <li><a href="{{ item.link2 }}">{{ item.link2Title }}</a></li>
+                    <li>{{ item.genre }}</li>
+                </ul>
+                <h1>{{ item.genre }}</h1>
+            </div>
+        </div>
+    </section>
+{{/each}}
