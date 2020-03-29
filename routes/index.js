@@ -5,6 +5,20 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     res.render('index', {
         title: 'Home',
+        slides: [
+            {
+                image: 'images/main-slider/1.jpg',
+                title: 'Learn more about coronavirus',
+                caption: 'What can you do to help stop coronavirus?',
+                link: '#stop-coronavirus'
+            },
+            {
+                image: 'images/main-slider/2.jpg',
+                title: 'Learn more about coronavirus',
+                caption: 'What\'s a coronavirus anyway?',
+                link: '#what-coronavirus'
+            }
+        ],
         news: [
             {
                 category: 'Learn',
