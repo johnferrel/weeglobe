@@ -34,11 +34,20 @@ router.get('/', function (req, res, next) {
     });
 });
 
-/* GET reading page */
-router.get('/read', function (req, res, next) {
-    res.render('read', {
-        title: 'Let\'s get to readin\''
-    })
+router.get('/classroom', function(req, res, next) {
+    res.render('classroom', { title: 'Classsroom' })
+});
+
+router.get('/reading', function(req, res, next) {
+  res.render('reading', { title: 'Let\'s get to readin\'' })
+});
+
+router.get('/activities', function(req, res, next) {
+  res.render('activities', { title: 'Activities' })
+});
+
+router.get('/games', function(req, res, next) {
+  res.render('games', { title: 'Games' })
 });
 
 module.exports = router;

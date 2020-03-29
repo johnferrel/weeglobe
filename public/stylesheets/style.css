@@ -1,34 +1,23 @@
 .cirlebar {
   position: fixed;
-  top: 25%;
+  bottom: 5%;
   right: 3%;
   z-index: 99999; }
   .cirlebar .cirlebar_icon {
-    position: relative;
-    display: block;
     font-size: 38px;
-    line-height: 1.2em;
-    color: #ffffff;
-    font-weight: 400; }
+    color: #ffffff; }
 
 .cirlebar .nav-link {
-  background-color: #f2c9b5;
-  margin: 0px 8px 20px;
-  height: 70px;
+  background-color: #ffae00;
   width: 70px;
-  border-radius: 50%;
-  text-align: center;
+  height: 70px;
+  margin: 0px 8px 15px;
   padding-top: 15px;
-  font-size: 16px;
-  line-height: 1.4em;
-  color: #ffffff;
-  font-weight: 400;
-  font-family: "Fredoka One", sans-serif; }
-
-.cirlebar .nav-link.active,
-.cirlebar .show > .nav-link {
-  color: #fff;
-  background-color: #d1cefd; }
+  border-radius: 50%; }
+  .cirlebar .nav-link:hover {
+    color: #ffffff;
+    -webkit-animation: 2s rainbow infinite alternate;
+    animation: 2s rainbow infinite alternate; }
 
 .news-block-two .text {
   min-height: 215px; }
