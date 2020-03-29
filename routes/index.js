@@ -49,17 +49,32 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET page titles. */
-router.get('/stories', function (req, res, next) {
-	res.render('reading/stories', {
+// router.get('/boy-apple-tree', function (req, res, next) {
+// 	res.render('reading/boy-apple-tree', {
+//     	pageTitles: [
+//         	{
+// 				bgimage: 'background-image:url(images/background/1.jpg);',
+// 				link1: '/',
+// 				link1Title: 'Home',
+// 				link2: '/reading',
+// 				link2Title: 'All Genres',
+// 				genre: 'Funny Stories'
+// 			}
+//       	]
+//   	});
+// });
+
+/* GET stories. */
+router.get('reading', function (req, res, next) {
+	res.render('reading', {
     	title: 'Stories',
     	pageTitles: [
         	{
-				bgimage: 'background-image:url(images/background/1.jpg);',
-				link1: '/',
-				link1Title: 'Home',
-				link2: '/reading',
-				link2Title: 'All Genres',
-				genre: 'Funny Stories'
+				genre: 'Science',
+				storyUrl: '',
+				storyTitle: '',
+				readingTime: '',
+				storyAuthor: '',
 			}
       	]
   	});
