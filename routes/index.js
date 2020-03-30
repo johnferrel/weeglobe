@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var storyHeaders = {
+var pageHeaders = {
     'boy-apple-tree': {
         bgimage: 'background-image:url(/images/background/1.jpg);',
         link1: '/',
@@ -121,13 +121,13 @@ router.get('/reading/stories/:storyId', function(req, res, next) {
 	res.render('reading/stories', {
         title: 'A Story',
 		storyId: req.params.storyId.toLowerCase(),
-		storyHeader: {
-			bgimage: req.params.storyId.toLowerCase().bgimage,
-			link1: req.params.storyId.toLowerCase().link1,
-			link1Title: req.params.storyId.toLowerCase().link1Title,
-			link2: req.params.storyId.toLowerCase().link2,
-			link2Title: req.params.storyId.toLowerCase().link2Title,
-			storyTitle: req.params.storyId.toLowerCase().storyTitle
+		pageHeader: {
+			bgimage: pageHeaders[req.params.storyId.toLowerCase()].bgimage,
+			link1: pageHeaders[req.params.storyId.toLowerCase()].link1,
+			link1Title: pageHeaders[req.params.storyId.toLowerCase()].link1Title,
+			link2: pageHeaders[req.params.storyId.toLowerCase()].link2,
+			link2Title: pageHeaders[req.params.storyId.toLowerCase()].link2Title,
+			storyTitle: pageHeaders[req.params.storyId.toLowerCase()].storyTitle
 		}
     })
 });
