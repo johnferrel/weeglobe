@@ -48,22 +48,6 @@ router.get('/', function (req, res, next) {
     });
 });
 
-/* GET page titles. */
-router.get('/boy-apple-tree', function (req, res, next) {
-	res.render('reading/boy-apple-tree', {
-    	pageTitles: [
-        	{
-				bgimage: 'background-image:url(/images/background/1.jpg);',
-				link1: '/',
-				link1Title: 'Home',
-				link2: '/reading',
-				link2Title: 'All Stories',
-				storyTitle: 'The boy and the apple tree'
-			}
-      	]
-  	});
-});
-
 /* GET stories. */
 router.get('/reading', function (req, res, next) {
 	res.render('reading', {
@@ -71,38 +55,48 @@ router.get('/reading', function (req, res, next) {
     	stories: [
         	{
 				imgUrl: 'reading/the-boy-and-the-apple-tree.jpg',
-				genre: '',
+				genre: 'Interesting reading',
 				storyUrl: 'reading/stories/boy-apple-tree',
 				storyTitle: 'The boy and the apple tree',
 				readingTime: '15 minutes',
 				storyAuthor: 'Jocelyn Mojzes',
 			},
 			{
-				imgUrl: 'resource/event-1.jpg',
-				genre: 'Science',
-				storyUrl: '/boy-apple-tree',
-				storyTitle: 'The boy and the apple tree',
-				readingTime: '',
+				imgUrl: 'reading/holmes.jpg',
+				genre: 'Funny stories',
+				storyUrl: 'reading/stories/dear-watson',
+				storyTitle: 'Sherlock Holmes - Dear Watson',
+				readingTime: '2 minutes',
 				storyAuthor: '',
 			},
 			{
-				imgUrl: 'resource/event-1.jpg',
-				genre: 'Science',
-				storyUrl: '/boy-apple-tree',
-				storyTitle: 'The boy and the apple tree',
-				readingTime: '',
+				imgUrl: 'reading/boy-temper.jpg',
+				genre: 'Short stories',
+				storyUrl: 'reading/stories/boy-who-was-always-losing-his-temper',
+				storyTitle: 'Boy who was always losing his temper',
+				readingTime: '3 minutes',
 				storyAuthor: '',
 			}
       	]
   	});
 });
 
+/* Route each story to a different url. Set headers for each story page */
 router.get('/reading/stories/:storyId', function(req, res, next) {
 	res.render('reading/stories', {
         title: 'A Story',
-        storyId: req.params.storyId.toLowerCase()
+		storyId: req.params.storyId.toLowerCase(),
+		storyHeader: 
+		{
+			bgimage: 'background-image:url(/images/background/1.jpg);',
+			link1: '/',
+			link1Title: 'Home',
+			link2: '/reading',
+			link2Title: 'All Stories',
+			storyTitle: 'The boy and the apple tree'
+		}
     })
-  });
+});
 
 router.get('/classroom', function(req, res, next) {
     res.render('classroom', { title: 'Classsroom' })

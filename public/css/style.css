@@ -2438,6 +2438,7 @@ img{
 .event-block .content-box{
 	position: relative;
 	padding: 50px 45px 35px;
+	background-color: chocolate;
 }
 
 .event-block .date{
