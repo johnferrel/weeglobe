@@ -94,3 +94,11 @@
 	-webkit-animation: 2s rainbow infinite alternate;
 	animation: 2s rainbow infinite alternate;
 }
+
+.footer-widget {
+    .logo {
+        img {
+            max-width: 40%;
+        }
+    }
+}
