@@ -34,12 +34,14 @@ router.get('/', function (req, res, next) {
         title: 'Home',
         slides: [
             {
+                index: 'rs-1681',
                 image: 'images/main-slider/1.jpg',
                 title: 'Learn more about coronavirus',
                 caption: 'What can you do to help stop coronavirus?',
                 link: '#stop-coronavirus'
             },
             {
+                index: 'rs-1682',
                 image: 'images/main-slider/2.jpg',
                 title: 'Learn more about coronavirus',
                 caption: 'What\'s a coronavirus anyway?',
