@@ -143,7 +143,17 @@ router.get('/activities', function(req, res, next) {
 });
 
 router.get('/games', function(req, res, next) {
-  res.render('games', { title: 'Games' })
+    res.render('games', {
+        title: 'Games',
+        pageHeader: {
+            bgimage: 'background-image:url(/images/background/1.jpg);',
+            link1: '/',
+            link1Title: 'Home',
+            link2: '/games',
+            link2Title: 'All Games',
+            headerTitle: 'Wanna Play A Game?'
+        }
+    })
 });
 
 module.exports = router;
