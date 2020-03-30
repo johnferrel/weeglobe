@@ -80,8 +80,11 @@ router.get('/reading', function (req, res, next) {
   	});
 });
 
-router.get('/boy-apple-tree', function(req, res, next) {
-	res.render('reading/boy-apple-tree', { title: 'The boy and the apple tree' })
+router.get('/reading/stories/:storyId', function(req, res, next) {
+	res.render('reading/stories', {
+        title: 'A Story',
+        storyId: req.params.storyId.toLowerCase()
+    })
   });
 
 router.get('/classroom', function(req, res, next) {
