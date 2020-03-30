@@ -74,44 +74,46 @@ router.get('/reading', function (req, res, next) {
     	stories: [
         	{
 				imgUrl: 'reading/the-boy-and-the-apple-tree.jpg',
-				genre: '',
+				genre: 'Interesting reading',
 				storyUrl: 'reading/stories/boy-apple-tree',
 				storyTitle: 'The boy and the apple tree',
 				readingTime: '15 minutes',
-                storyAuthor: 'Jocelyn Mojzes',
+				storyAuthor: 'Jocelyn Mojzes',
 			},
 			{
-				imgUrl: 'resource/event-1.jpg',
-				genre: 'Science',
-				storyUrl: '/boy-apple-tree',
-				storyTitle: 'The boy and the apple tree',
-				readingTime: '',
+				imgUrl: 'reading/holmes.jpg',
+				genre: 'Funny stories',
+				storyUrl: 'reading/stories/dear-watson',
+				storyTitle: 'Sherlock Holmes - Dear Watson',
+				readingTime: '2 minutes',
 				storyAuthor: '',
 			},
 			{
-				imgUrl: 'resource/event-1.jpg',
-				genre: 'Science',
-				storyUrl: '/boy-apple-tree',
-				storyTitle: 'The boy and the apple tree',
-				readingTime: '',
+				imgUrl: 'reading/boy-temper.jpg',
+				genre: 'Short stories',
+				storyUrl: 'reading/stories/boy-who-was-always-losing-his-temper',
+				storyTitle: 'Boy who was always losing his temper',
+				readingTime: '3 minutes',
 				storyAuthor: '',
 			}
       	]
   	});
 });
 
+/* Route each story to a different url. Set headers for each story page */
 router.get('/reading/stories/:storyId', function(req, res, next) {
 	res.render('reading/stories', {
         title: 'A Story',
-        storyId: req.params.storyId.toLowerCase(),
-        pageHeader: {
-            bgimage: storyHeaders[req.params.storyId.toLowerCase()].bgimage,
-            link1: storyHeaders[req.params.storyId.toLowerCase()].link,
-            link1Title: storyHeaders[req.params.storyId.toLowerCase()].link1Title,
-            link2: storyHeaders[req.params.storyId.toLowerCase()].link2,
-            link2Title: storyHeaders[req.params.storyId.toLowerCase()].link2Title,
-            storyTitle: storyHeaders[req.params.storyId.toLowerCase()].storyTitle
-        }
+		storyId: req.params.storyId.toLowerCase(),
+		storyHeader: 
+		{
+			bgimage: 'background-image:url(/images/background/1.jpg);',
+			link1: '/',
+			link1Title: 'Home',
+			link2: '/reading',
+			link2Title: 'All Stories',
+			storyTitle: 'The boy and the apple tree'
+		}
     })
 });
 
