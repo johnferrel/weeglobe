@@ -10,7 +10,6 @@ var helpers = require('handlebars-helpers')({
 });
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -38,7 +37,6 @@ app.use('/reading', indexRouter);
 app.use('/read', indexRouter);
 app.use('/activities', indexRouter);
 app.use('/games', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
