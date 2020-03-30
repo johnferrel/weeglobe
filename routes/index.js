@@ -94,7 +94,7 @@ router.get('/reading', function (req, res, next) {
 				storyUrl: 'reading/stories/dear-watson',
 				headerTitle: 'Sherlock Holmes - Dear Watson',
 				readingTime: '2 minutes',
-				storyAuthor: '',
+				storyAuthor: 'Arthur Conan Doyle',
 			},
 			{
 				imgUrl: 'reading/boy-temper.jpg',
@@ -102,7 +102,7 @@ router.get('/reading', function (req, res, next) {
 				storyUrl: 'reading/stories/boy-who-was-always-losing-his-temper',
 				headerTitle: 'Boy who was always losing his temper',
 				readingTime: '3 minutes',
-				storyAuthor: '',
+				storyAuthor: 'Unknown',
 			}
       	]
   	});
