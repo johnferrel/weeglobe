@@ -49,20 +49,20 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET page titles. */
-// router.get('/boy-apple-tree', function (req, res, next) {
-// 	res.render('reading/boy-apple-tree', {
-//     	pageTitles: [
-//         	{
-// 				bgimage: 'background-image:url(images/background/1.jpg);',
-// 				link1: '/',
-// 				link1Title: 'Home',
-// 				link2: '/reading',
-// 				link2Title: 'All Genres',
-// 				genre: 'Funny Stories'
-// 			}
-//       	]
-//   	});
-// });
+router.get('/boy-apple-tree', function (req, res, next) {
+	res.render('reading/boy-apple-tree', {
+    	pageTitles: [
+        	{
+				bgimage: 'background-image:url(/images/background/1.jpg);',
+				link1: '/',
+				link1Title: 'Home',
+				link2: '/reading',
+				link2Title: 'All Stories',
+				storyTitle: 'The boy and the apple tree'
+			}
+      	]
+  	});
+});
 
 /* GET stories. */
 router.get('/reading', function (req, res, next) {
@@ -70,6 +70,23 @@ router.get('/reading', function (req, res, next) {
     	title: 'Stories',
     	stories: [
         	{
+				imgUrl: 'reading/the-boy-and-the-apple-tree.jpg',
+				genre: '',
+				storyUrl: '/boy-apple-tree',
+				storyTitle: 'The boy and the apple tree',
+				readingTime: '15 minutes',
+				storyAuthor: 'Jocelyn Mojzes',
+			},
+			{
+				imgUrl: 'resource/event-1.jpg',
+				genre: 'Science',
+				storyUrl: '/boy-apple-tree',
+				storyTitle: 'The boy and the apple tree',
+				readingTime: '',
+				storyAuthor: '',
+			},
+			{
+				imgUrl: 'resource/event-1.jpg',
 				genre: 'Science',
 				storyUrl: '/boy-apple-tree',
 				storyTitle: 'The boy and the apple tree',
