@@ -1,6 +1,25 @@
 var express = require('express');
 var router = express.Router();
 
+var storyHeaders = {
+    'boy-apple-tree': {
+        bgimage: 'background-image:url(/images/background/1.jpg);',
+        link1: '/',
+        link1Title: 'Home',
+        link2: '/reading',
+        link2Title: 'All Stories',
+        storyTitle: 'The boy and the apple tree'
+    },
+    'john': {
+        bgimage: 'background-image:url(/images/background/1.jpg);',
+        link1: '/',
+        link1Title: 'Home',
+        link2: '/reading',
+        link2Title: 'All Stories',
+        storyTitle: 'Johnny Boy'
+    }
+}
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', {
@@ -48,22 +67,6 @@ router.get('/', function (req, res, next) {
     });
 });
 
-/* GET page titles. */
-router.get('/boy-apple-tree', function (req, res, next) {
-	res.render('reading/boy-apple-tree', {
-    	pageTitles: [
-        	{
-				bgimage: 'background-image:url(/images/background/1.jpg);',
-				link1: '/',
-				link1Title: 'Home',
-				link2: '/reading',
-				link2Title: 'All Stories',
-				storyTitle: 'The boy and the apple tree'
-			}
-      	]
-  	});
-});
-
 /* GET stories. */
 router.get('/reading', function (req, res, next) {
 	res.render('reading', {
@@ -75,7 +78,7 @@ router.get('/reading', function (req, res, next) {
 				storyUrl: 'reading/stories/boy-apple-tree',
 				storyTitle: 'The boy and the apple tree',
 				readingTime: '15 minutes',
-				storyAuthor: 'Jocelyn Mojzes',
+                storyAuthor: 'Jocelyn Mojzes',
 			},
 			{
 				imgUrl: 'resource/event-1.jpg',
@@ -100,9 +103,17 @@ router.get('/reading', function (req, res, next) {
 router.get('/reading/stories/:storyId', function(req, res, next) {
 	res.render('reading/stories', {
         title: 'A Story',
-        storyId: req.params.storyId.toLowerCase()
+        storyId: req.params.storyId.toLowerCase(),
+        pageHeader: {
+            bgimage: storyHeaders[req.params.storyId.toLowerCase()].bgimage,
+            link1: storyHeaders[req.params.storyId.toLowerCase()].link,
+            link1Title: storyHeaders[req.params.storyId.toLowerCase()].link1Title,
+            link2: storyHeaders[req.params.storyId.toLowerCase()].link2,
+            link2Title: storyHeaders[req.params.storyId.toLowerCase()].link2Title,
+            storyTitle: storyHeaders[req.params.storyId.toLowerCase()].storyTitle
+        }
     })
-  });
+});
 
 router.get('/classroom', function(req, res, next) {
     res.render('classroom', { title: 'Classsroom' })
