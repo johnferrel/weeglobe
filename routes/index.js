@@ -72,7 +72,7 @@ router.get('/reading', function (req, res, next) {
         	{
 				imgUrl: 'reading/the-boy-and-the-apple-tree.jpg',
 				genre: '',
-				storyUrl: '/boy-apple-tree',
+				storyUrl: 'reading/stories/boy-apple-tree',
 				storyTitle: 'The boy and the apple tree',
 				readingTime: '15 minutes',
 				storyAuthor: 'Jocelyn Mojzes',
