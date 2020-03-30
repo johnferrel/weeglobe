@@ -160,4 +160,10 @@ router.get('/login', function(req, res, next) {
     res.render('login', { title: 'Login' })
 });
 
+router.post('/search', function(req, res, next) {
+    res.render('search', {
+        title: 'Search'
+    });
+});
+
 module.exports = router;
