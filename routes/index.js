@@ -129,7 +129,7 @@ router.get('/classroom', function(req, res, next) {
 });
 
 router.get('/activities', function(req, res, next) {
-  res.render('activities', { 
+  res.render('activities', {
         title: 'Activities',
         pageHeader: {
             bgimage: 'background-image:url(/images/background/1.jpg);',
