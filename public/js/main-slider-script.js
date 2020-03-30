@@ -27,10 +27,10 @@
                     },
                     arrows: {
                         style:"metis",
-                        enable:true,
+                        enable:false,
                         hide_onmobile:true,
                         hide_under:600,
-                        hide_onleave:true,
+                        hide_onleave:false,
                         tmp:'',
                         left: {
                             h_align:"right",
