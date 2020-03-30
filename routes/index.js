@@ -105,14 +105,13 @@ router.get('/reading/stories/:storyId', function(req, res, next) {
 	res.render('reading/stories', {
         title: 'A Story',
 		storyId: req.params.storyId.toLowerCase(),
-		storyHeader: 
-		{
-			bgimage: 'background-image:url(/images/background/1.jpg);',
-			link1: '/',
-			link1Title: 'Home',
-			link2: '/reading',
-			link2Title: 'All Stories',
-			storyTitle: 'The boy and the apple tree'
+		storyHeader: {
+			bgimage: req.params.storyId.toLowerCase().bgimage,
+			link1: req.params.storyId.toLowerCase().link1,
+			link1Title: req.params.storyId.toLowerCase().link1Title,
+			link2: req.params.storyId.toLowerCase().link2,
+			link2Title: req.params.storyId.toLowerCase().link2Title,
+			storyTitle: req.params.storyId.toLowerCase().storyTitle
 		}
     })
 });
