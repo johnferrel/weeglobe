@@ -8,7 +8,7 @@ var pageHeaders = {
         link1Title: 'Home',
         link2: '/reading',
         link2Title: 'All Stories',
-        storyTitle: 'The boy and the apple tree'
+        headerTitle: 'The boy and the apple tree'
     },
     'dear-watson': {
         bgimage: 'background-image:url(/images/background/1.jpg);',
@@ -16,7 +16,7 @@ var pageHeaders = {
         link1Title: 'Home',
         link2: '/reading',
         link2Title: 'All Stories',
-        storyTitle: 'Sherlock Holmes - Dear Watson'
+        headerTitle: 'Sherlock Holmes - Dear Watson'
     },
     'boy-who-was-always-losing-his-temper': {
         bgimage: 'background-image:url(/images/background/1.jpg);',
@@ -24,15 +24,7 @@ var pageHeaders = {
         link1Title: 'Home',
         link2: '/reading',
         link2Title: 'All Stories',
-        storyTitle: 'Boy who was always losing his temper'
-    },
-    'gonoodle-videos': {
-        bgimage: 'background-image:url(/images/background/1.jpg);',
-        link1: '/',
-        link1Title: 'Home',
-        link2: '/activities',
-        link2Title: 'GoNoodle',
-        storyTitle: 'Watch and dance with GoNoodle'
+        headerTitle: 'Boy who was always losing his temper'
     }
 }
 
@@ -92,7 +84,7 @@ router.get('/reading', function (req, res, next) {
 				imgUrl: 'reading/the-boy-and-the-apple-tree.jpg',
 				genre: 'Interesting reading',
 				storyUrl: 'reading/stories/boy-apple-tree',
-				storyTitle: 'The boy and the apple tree',
+				headerTitle: 'The boy and the apple tree',
 				readingTime: '15 minutes',
 				storyAuthor: 'Jocelyn Mojzes',
 			},
@@ -100,7 +92,7 @@ router.get('/reading', function (req, res, next) {
 				imgUrl: 'reading/holmes.jpg',
 				genre: 'Funny stories',
 				storyUrl: 'reading/stories/dear-watson',
-				storyTitle: 'Sherlock Holmes - Dear Watson',
+				headerTitle: 'Sherlock Holmes - Dear Watson',
 				readingTime: '2 minutes',
 				storyAuthor: '',
 			},
@@ -108,7 +100,7 @@ router.get('/reading', function (req, res, next) {
 				imgUrl: 'reading/boy-temper.jpg',
 				genre: 'Short stories',
 				storyUrl: 'reading/stories/boy-who-was-always-losing-his-temper',
-				storyTitle: 'Boy who was always losing his temper',
+				headerTitle: 'Boy who was always losing his temper',
 				readingTime: '3 minutes',
 				storyAuthor: '',
 			}
@@ -127,7 +119,7 @@ router.get('/reading/stories/:storyId', function(req, res, next) {
 			link1Title: pageHeaders[req.params.storyId.toLowerCase()].link1Title,
 			link2: pageHeaders[req.params.storyId.toLowerCase()].link2,
 			link2Title: pageHeaders[req.params.storyId.toLowerCase()].link2Title,
-			storyTitle: pageHeaders[req.params.storyId.toLowerCase()].storyTitle
+			headerTitle: pageHeaders[req.params.storyId.toLowerCase()].headerTitle
 		}
     })
 });
@@ -137,7 +129,17 @@ router.get('/classroom', function(req, res, next) {
 });
 
 router.get('/activities', function(req, res, next) {
-  res.render('activities', { title: 'Activities' })
+  res.render('activities', {
+        title: 'Activities',
+        pageHeader: {
+            bgimage: 'background-image:url(/images/background/1.jpg);',
+            link1: '/',
+            link1Title: 'Home',
+            link2: '/activities',
+            link2Title: 'All activities',
+            headerTitle: 'Dance with GoNoodle'
+        }
+    })
 });
 
 router.get('/games', function(req, res, next) {
