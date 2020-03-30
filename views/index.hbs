@@ -6,7 +6,7 @@
                 {{#each slides as |slide|}}
                     <li data-transition="parallaxvertical" data-description="Slide Description" data-easein="default"
                         data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade"
-                        data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1681"
+                        data-hideafterloop="0" data-hideslideonmobile="off" data-index="{{ slide.index }}"
                         data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3=""
                         data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
                         data-rotate="0" data-saveperformance="off" data-slotamount="default"
@@ -92,8 +92,7 @@
                             data-voffset="['190','190','130','190']" data-x="['left','left','left','left']"
                             data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
                             data-frames='[{"delay":2000,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-                            <div class="link-box"><a href="javascript:void(0);" class="theme-btn btn-style-one scroll-to-target" data-target="{{ slide.link }}">Learn More</a>
-                            </div>
+                            <div class="link-box"><a href="javascript:void(0);" class="theme-btn btn-style-one scroll-to-target" data-target="{{ slide.link }}">Learn More</a></div>
                         </div>
                     </li>
                 {{/each}}
