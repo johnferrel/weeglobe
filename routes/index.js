@@ -10,13 +10,29 @@ var storyHeaders = {
         link2Title: 'All Stories',
         storyTitle: 'The boy and the apple tree'
     },
-    'john': {
+    'dear-watson': {
         bgimage: 'background-image:url(/images/background/1.jpg);',
         link1: '/',
         link1Title: 'Home',
         link2: '/reading',
         link2Title: 'All Stories',
-        storyTitle: 'Johnny Boy'
+        storyTitle: 'Sherlock Holmes - Dear Watson'
+    },
+    'boy-who-was-always-losing-his-temper': {
+        bgimage: 'background-image:url(/images/background/1.jpg);',
+        link1: '/',
+        link1Title: 'Home',
+        link2: '/reading',
+        link2Title: 'All Stories',
+        storyTitle: 'Boy who was always losing his temper'
+    },
+    'gonoodle-videos': {
+        bgimage: 'background-image:url(/images/background/1.jpg);',
+        link1: '/',
+        link1Title: 'Home',
+        link2: '/activities',
+        link2Title: 'GoNoodle',
+        storyTitle: 'Watch and dance with GoNoodle'
     }
 }
 
