@@ -32,6 +32,7 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/login', indexRouter);
 app.use('/classroom', indexRouter);
 app.use('/reading', indexRouter);
 app.use('/read', indexRouter);
